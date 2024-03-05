@@ -26,20 +26,14 @@ runBtn.addEventListener("click" , () => {
 
 
 
+function toggleArea(targetArea) {
+    const allAreas = ['.js-area', '.html-area', '.css-area'];
+    allAreas.forEach(area => {
+        const element = document.querySelector(area);
+        element.classList.toggle('none', area !== targetArea);
+    });
+}
 
-jsBtn.addEventListener("click" , () => {
-    document.querySelector(".js-area").classList.remove("none");
-    document.querySelector(".html-area").classList.add("none");
-    document.querySelector(".css-area").classList.add("none");
-})
-cssBtn.addEventListener("click" , () => {
-    document.querySelector(".css-area").classList.remove("none");
-    document.querySelector(".js-area").classList.add("none");
-    document.querySelector(".html-area").classList.add("none");
-    
-})
-htmlBtn.addEventListener("click" , () => {
-    document.querySelector(".html-area").classList.remove("none");
-    document.querySelector(".js-area").classList.add("none");
-    document.querySelector(".css-area").classList.add("none");
-})
+jsBtn.addEventListener('click', () => toggleArea('.js-area'));
+cssBtn.addEventListener('click', () => toggleArea('.css-area'));
+htmlBtn.addEventListener('click', () => toggleArea('.html-area'));
