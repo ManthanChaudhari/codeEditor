@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Edior</title>
+    <link rel="stylesheet" href="style.css">
+    <script  defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+       <header>
+         <div class="header-button">
+            <button id="runBtn">
+                Run Code
+                <span style="color : white">&#8594;</span>
+            </button>
+            <button id="htmlBtn">
+                HTML
+                <span style="color : white">&#8594;</span>
+            </button>
+            <button id="cssBtn">
+                CSS
+                <span style="color : white">&#8594;</span>
+            </button>
+            <button id="jsBtn">
+                Javascript
+                <span style="color : white">&#8594;</span>
+            </button>
+         </div>
+       </header>
+       <main>
+        <div class="code-area">
+            <textarea class="html-area"><h1>Hello World!</h1></textarea>
+            <textarea class="css-area none">h1{color : red}</textarea>
+            <textarea class="js-area none">runArea.querySelector("h1").style.color = "blue"</textarea>
+        </div>
+        <div class="run-area">
+
+        </div>
+       </main>
+       <footer>
+         
+       </footer>
+    </div>
+</body>
+</html>
